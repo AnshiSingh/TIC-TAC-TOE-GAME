@@ -5,8 +5,6 @@
 
 # ## Function to print a board
 
-# In[2]:
-
 
 from IPython.display import clear_output
 
@@ -26,16 +24,12 @@ def display_board(board):
     print('   |   |')
 
 
-# In[6]:
-
 
 test_board = ['#','X','O','X','O','X','O','X','O','X']
 display_board(test_board)
 
 
 # ## This function will take the player input and assign it a marker 'X' or 'O' 
-
-# In[8]:
 
 
 def player_input():
@@ -50,22 +44,15 @@ def player_input():
         return ('O', 'X')
 
 
-# In[10]:
-
 
 player_input()
 
 
 # ## This function will take board list,markerand desired position 
 
-# In[12]:
-
 
 def place_marker(board, marker, position):
     board[position] = marker
-
-
-# In[16]:
 
 
 place_marker(test_board,'$',7)
@@ -73,8 +60,6 @@ display_board(test_board)
 
 
 # ## This function will take a board and see if someone has won
-
-# In[18]:
 
 
 def win_check(board,mark):
@@ -89,15 +74,12 @@ def win_check(board,mark):
     (board[9] == mark and board[5] == mark and board[1] == mark)) # diagonal
 
 
-# In[21]:
-
 
 win_check(test_board,'X')
 
 
 # ## This function use ramdom to decide randomly which player goes first
 
-# In[23]:
 
 
 import random
@@ -111,8 +93,6 @@ def choose_first():
 
 # ## This function will check whether a space on the board is available 
 
-# In[24]:
-
 
 def space_check(board, position):
     
@@ -120,8 +100,6 @@ def space_check(board, position):
 
 
 # ## This function will check if the board is full ,True if full,else False
-
-# In[26]:
 
 
 def full_board_check(board):
@@ -132,8 +110,6 @@ def full_board_check(board):
 
 
 # ## This function asks for players next position
-
-# In[29]:
 
 
 def player_choice(board):
@@ -147,8 +123,6 @@ def player_choice(board):
 
 # ## This function will asks if the player wants to play again
 
-# In[27]:
-
 
 def replay():
     
@@ -156,8 +130,6 @@ def replay():
 
 
 # ## Here is the compilation of above functions take place using while loops
-
-# In[30]:
 
 
 print('Welcome to Tic Tac Toe!')
